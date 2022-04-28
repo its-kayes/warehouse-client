@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
     return (
         <div className='mt-20'>
-<hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+            <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
 
             <footer class="p-4 bg-white rounded-lg shadow md:px-6 md:py-8 dark:bg-gray-800">
                 <div class="sm:flex sm:items-center sm:justify-between">
@@ -14,16 +14,16 @@ const Footer = () => {
 
                     <ul class="flex flex-wrap items-center mb-6 text-xl text-gray-500 sm:mb-0 dark:text-gray-400">
                         <li>
-                            <a href="#" class="mr-4 hover:underline md:mr-6 "><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://www.linkedin.com/in/emrul-kayes-b61895237/" class="mr-4 hover:underline md:mr-6 "><i class="fa-brands fa-linkedin"></i></a>
                         </li>
                         <li>
-                            <a href="#" class="mr-4 hover:underline md:mr-6"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://github.com/its-kayes" class="mr-4 hover:underline md:mr-6"><i class="fa-brands fa-github"></i></a>
                         </li>
                         <li>
-                            <a href="#" class="mr-4 hover:underline md:mr-6 "><i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://www.facebook.com/kayes0000000/" class="mr-4 hover:underline md:mr-6 "><i class="fa-brands fa-facebook"></i></a>
                         </li>
                         <li>
-                            <a href="#" class="hover:underline"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.instagram.com/___kayes__/" class="hover:underline"><i class="fa-brands fa-instagram"></i></a>
                         </li>
                     </ul>
                 </div>
