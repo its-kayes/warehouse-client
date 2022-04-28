@@ -1,0 +1,62 @@
+[
+    {
+        "postId": 3,
+        "id": 1,
+        "name": "T-Shirt",
+        "quantity": "150",
+        "supplier": "Raimond Group",
+        "body": "Best T-shirt for both man and woman. 100% cotton, Relaxable",
+        "price": "$19",
+        "userImg": "t-shirt.png"
+    },
+    {
+        "postId": 3,
+        "id": 2,
+        "name": "Female Combo",
+        "quantity": "80",
+        "supplier": "Women Collection",
+        "price": "$99",
+        "body": "This is a Combo dress for Woman's. In this collection you will get best combo dress for you",
+        "userImg": "female-combo.png"
+    },
+    {
+        "postId": 3,
+        "id": 3,
+        "name": "Illusion Mini Dress",
+        "quantity": "50",
+        "supplier": "Wester Plaza",
+        "body": "Its a one kind of short dress. Those who like western you guys can easy buy this",
+        "price": "$30",
+        "userImg": "Mini-Dress.png"
+    },
+    {
+        "postId": 4,
+        "id": 4,
+        "name": "Shirt",
+        "quantity": "140",
+        "supplier": "Royal Cloths",
+        "body": "Best Shirt for you and your buddies. 100% Qulityful, best version for your skin color  ",
+        "price": "$60",
+        "userImg": "Shirt.png"
+    },
+    {
+        "postId": 5,
+        "id": 5,
+        "name": "Formal Pant",
+        "quantity": "200",
+        "supplier": "Asian Cloths LTD",
+        "body": "Formal Pant for those who work any official job. Best Qulity, easy to ware ",
+        "price": "$50",
+        "userImg": "pant.png"
+    },
+    {
+        "postId": 5,
+        "id": 6,
+        "name": "Jacket for Man and Woman",
+        "quantity": "100",
+        "supplier": "Rasian Group",
+        "body": "Jacket for man and woman. 100% leather, easy to ware, best qulity, low price range",
+        "price": "$160",
+        "userImg": "jacket.png"
+    }
+]
