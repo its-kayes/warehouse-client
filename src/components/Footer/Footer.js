@@ -27,7 +27,7 @@ const Footer = () => {
                         </li>
                     </ul>
                 </div>
-                <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400"> This Website is Design And Deploy by Kayes for Educational Purpose
+                <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400"> This Website is Design And Deploy by Emrul Kayes for Educational Purpose
                 </span>
                 <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© Copyright 2022</span>
             </footer>
