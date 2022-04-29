@@ -1,5 +1,6 @@
 import React from 'react';
 import Items from '../Items/Items';
+import Mysterybox from '../Mysterybox/Mysterybox';
 import Subscribe from '../Subscribe/Subscribe';
 import './Home.css';
 
@@ -17,7 +18,13 @@ const Home = () => {
                 <p className='text-4xl mt-12 mb-12 font-bold tracking-tight text-gray-900 dark:text-white'> Item You Can Buy </p>
                 <Items></Items>
             </div>
-            <Subscribe></Subscribe>
+            <div>
+                <h1 className='text-5xl underline mt-12 mb-12 font-bold tracking-tight text-gray-900 dark:text-white mt-28'> Surprise For You....!? </h1>
+                <Mysterybox> </Mysterybox>
+            </div>
+
+            <Subscribe> </Subscribe>
+
         </div>
     );
 };
