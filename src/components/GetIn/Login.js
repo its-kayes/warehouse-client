@@ -2,6 +2,7 @@ import React from 'react';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import Social from '../Social/Social';
 
 const Login = () => {
     const [
@@ -42,6 +43,7 @@ const Login = () => {
                 </form>
 
             </div>
+            <Social> </Social>
         </div>
     );
 };
