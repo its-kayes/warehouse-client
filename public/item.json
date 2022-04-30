@@ -51,12 +51,11 @@
     },
     {
         "postId": 5,
-        "id": 6,
-        "name": "Jacket for Man and Woman",
-        "quantity": "100",
-        "supplier": "Rasian Group",
-        "body": "Jacket for man and woman. 100% leather, easy to ware, best qulity, low price range",
-        "price": "$160",
-        "userImg": "jacket.png"
+        "name": "Woman Pant",
+        "quantity": "120",
+        "supplier": "American Brand",
+        "body": "Woman Pant for All woman. Easy to ware, best qulity, low price range",
+        "price": "$60",
+        "userImg": "https://i.ibb.co/thWgW4Q/woman-pant.webp"
     }
 ]
