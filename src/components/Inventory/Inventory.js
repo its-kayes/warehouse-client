@@ -4,7 +4,7 @@ import Items from '../Items/Items';
 const Inventory = () => {
     return (
         <div>
-            <Items> </Items>
+            <Items>  </Items>
         </div>
     );
 };

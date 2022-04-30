@@ -1,20 +1,48 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
+let updateStock;
+
 const InventoryDetails = () => {
     let { id } = useParams();
     let [peritem, setPeritem] = useState();
+    let [newupdateStock, setNewupdateStock] = useState();
 
     useEffect(() => {
         let url = `http://localhost:5000/items/${id}`;
-        console.log(url);
+        // console.log(url);
         fetch(url)
             .then(res => res.json())
             .then(data => setPeritem(data));
 
     }, [])
     // useEffect()
-    console.log(peritem?.userImg);
+    // console.log(peritem?.userImg);
+
+    let updateStock = event => {
+        event.preventDefault();
+        let newStock = event.target.number.value;
+        // console.log(newStock);
+        // console.log(parseInt(peritem?.quantity));
+
+        let stockk = (peritem?.quantity)
+
+        // let stock = parseInt((peritem?.quantity)) + parseInt(newStock);
+        let stock = parseInt(stockk) + parseInt(newStock);
+        updateStock = stock;
+        // setNewupdateStock(parseInt(stock));
+        
+        console.log("previous",stockk);
+        console.log("after stock",stock);
+        
+        console.log("update", updateStock);
+        // if(stockk != stock) {
+        // }
+        // setPeritem()
+    }
+
+
+
     return (
         <div className='flex justify-around mt-14'>
 
@@ -45,18 +73,20 @@ const InventoryDetails = () => {
 
 
 
-            
+
             <div className='items-center mt-32'>
-                <div class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-                    <div class="flex flex-col items-center pb-10 px-4 pt-6">
-                        <img class="mb-3 w-24 h-24 rounded-full shadow-lg" src={peritem?.userImg} alt="Bonnie image" />
-                        <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">{peritem?.name}</h5>
-                        <span class="text-sm text-gray-500 dark:text-gray-400">How many product do you want to add ?</span>
-                        <div class="flex mt-4 space-x-3 lg:mt-6">
-                            {/* <a href="#" class="">Message</a> */}
-                            <input type="number" name="number" id="" className="inline-flex items-center w-24 text-sm font-medium text-center text-gray-900 bg-white rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-700 dark:focus:ring-gray-700" />
-                            <button class="inline-flex items-center py-2 px-4 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add</button>
-                        </div>
+                <div className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+                    <div className="flex flex-col items-center pb-10 px-4 pt-6">
+                        <img className="mb-3 w-24 h-24 rounded-full shadow-lg" src={peritem?.userImg} alt="Bonnie image" />
+                        <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">{peritem?.name}</h5>
+                        <span className="text-sm text-gray-500 dark:text-gray-400">How many product do you want to add ?</span>
+
+                        <form onSubmit={updateStock}>
+                            <div className="flex mt-4 space-x-3 lg:mt-6">
+                                <input type="number" name="number" id="" className="inline-flex items-center w-24 text-sm font-medium text-center text-gray-900 bg-white rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-700 dark:focus:ring-gray-700" />
+                                <input type="submit" value="Add" className="inline-flex items-center py-2 px-4 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" />
+                            </div>
+                        </form>
                     </div>
                 </div>
 
