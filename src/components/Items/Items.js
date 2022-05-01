@@ -23,7 +23,7 @@ const Items = () => {
             <div className='items-container'>
                 {
                     homeItems.map(item =>
-                        <div className="grid-cols-3 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+                        <div className="grid-cols-3 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700" key={item._id}>
                             <p>
                                 <img className="rounded-t-lg" src={item.userImg} alt="" />
                             </p>
