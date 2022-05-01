@@ -12,6 +12,7 @@ import MyItems from './components/MyItems/MyItems';
 import Inventory from './components/Inventory/Inventory';
 import InventoryDetails from './components/Inventory/InventoryDetails';
 import ManageInventory from './components/ManageInventory/ManageInventory';
+import AddItemToDb from './components/ManageInventory/AddItemToDb';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path='/about' element={<About></About>}> </Route>
         <Route path='/login' element={<Login></Login>}> </Route>
         <Route path='/inventory' element={<Inventory></Inventory>}> </Route>
+        <Route path='/additemtodb' element={<AddItemToDb></AddItemToDb>}> </Route>
 
         <Route path='/inventory/:id' element={<RequireAuth>
           <InventoryDetails></InventoryDetails>
