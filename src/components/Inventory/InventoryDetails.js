@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 
-let updateStock;
+// let updateStock;
 
 const InventoryDetails = () => {
     let { id } = useParams();
@@ -16,26 +16,62 @@ const InventoryDetails = () => {
             .then(data => setPeritem(data));
 
     }, [])
+    console.log(peritem);
     // useEffect()
     // console.log(peritem?.userImg);
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     let updateStock = event => {
         event.preventDefault();
-        let newStock = event.target.number.value;
-        // console.log(newStock);
-        // console.log(parseInt(peritem?.quantity));
+        let inputStockValue = event.target.number.value;
+        let previousStock = (peritem?.quantity);
+        let newStock = parseInt(previousStock) + parseInt(inputStockValue);
 
-        let stockk = (peritem?.quantity)
+        let url = `http://localhost:5000/items/${id}`;
+        fetch(url, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(newStock)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(" Data Update", peritem);
+            alert("Update Quintaty ");
+            event.target.reset();
+        })
+        
+        
+        
+        
+        
+        
+        
 
-        // let stock = parseInt((peritem?.quantity)) + parseInt(newStock);
-        let stock = parseInt(stockk) + parseInt(newStock);
-        updateStock = stock;
+
+
+
+        
+        
         // setNewupdateStock(parseInt(stock));
-
-        console.log("previous", stockk);
-        console.log("after stock", stock);
-
-        console.log("update", updateStock);
+        // updateStock = newStock;
+        // console.log("previous", previousStock);
+        // console.log("after stock", stock);
+        console.log("update", newStock);
         // if(stockk != stock) {
         // }
         // setPeritem()
@@ -96,9 +132,9 @@ const InventoryDetails = () => {
 
             </div>
             <p className='mt-20'>
-                <Link to='/manageinventories' class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
-                    <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                        Manage Inventories <i class="fa-solid fa-screwdriver-wrench mx-2"></i>
+                <Link to='/manageinventories' className="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
+                    <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                        Manage Inventories <i className="fa-solid fa-screwdriver-wrench mx-2"></i>
                     </span>
                 </Link>
             </p>
