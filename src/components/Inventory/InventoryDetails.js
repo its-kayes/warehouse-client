@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 
-// let updateStock;
 
 const InventoryDetails = () => {
     let { id } = useParams();
     let [peritem, setPeritem] = useState();
-    let [newupdateStock, setNewupdateStock] = useState();
 
     useEffect(() => {
         let url = `http://localhost:5000/items/${id}`;
@@ -17,28 +15,14 @@ const InventoryDetails = () => {
 
     }, [])
     console.log(peritem);
-    // useEffect()
-    // console.log(peritem?.userImg);
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     let updateStock = event => {
         event.preventDefault();
         let inputStockValue = event.target.number.value;
         let previousStock = (peritem?.quantity);
-        let newStock = parseInt(previousStock) + parseInt(inputStockValue);
+        let stock = parseInt(previousStock) + parseInt(inputStockValue);
+        let newObject = {...peritem, quantity: stock};
 
         let url = `http://localhost:5000/items/${id}`;
         fetch(url, {
@@ -46,35 +30,17 @@ const InventoryDetails = () => {
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(newStock)
+            body: JSON.stringify(newObject)
         })
         .then(res => res.json())
         .then(data => {
-            console.log(" Data Update", peritem);
+            console.log(" Data Update", data);
             alert("Update Quintaty ");
+            setPeritem(newObject);
             event.target.reset();
         })
         
-        
-        
-        
-        
-        
-        
-
-
-
-
-        
-        
-        // setNewupdateStock(parseInt(stock));
-        // updateStock = newStock;
-        // console.log("previous", previousStock);
-        // console.log("after stock", stock);
-        console.log("update", newStock);
-        // if(stockk != stock) {
-        // }
-        // setPeritem()
+        console.log("update", newObject);
     }
 
 
