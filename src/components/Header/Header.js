@@ -8,7 +8,10 @@ const Header = () => {
 
     const [user] = useAuthState(auth);
     let signout = () => {
-        signOut(auth);
+        let yes = window.confirm(" Are You Sure You Want To Log Out ?" );
+        if(yes) {
+            signOut(auth);
+        }
     }
 
 
