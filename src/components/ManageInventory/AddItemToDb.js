@@ -1,17 +1,24 @@
+import auth from '../../firebase.init';
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 
 const AddItemToDb = () => {
-
-
+    
+    const [user, loading, error] = useAuthState(auth);
+    if(user) {
+        console.log(user);
+    }
     let addItemTodb = event => {
         event.preventDefault();
+
         let name = event.target.name.value;
         let quantity = event.target.quantity.value;
         let supplier = event.target.supplier.value;
         let price = event.target.price.value;
         let body = event.target.body.value;
         let userImg = event.target.img.value;
-        let newItem = { name, quantity, supplier, price, body, userImg }
+        let email = event.target.email.value;
+        let newItem = { name, quantity, supplier, price, body, userImg, email }
         console.log(newItem);
         event.target.reset();
         fetch('http://localhost:5000/additemtodb', {
@@ -24,7 +31,7 @@ const AddItemToDb = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                alert(" Your Product Successfully Added :3 "); 
+                alert(" Your Product Successfully Added :3 ");
             })
             .catch((error) => {
                 console.error('Error:', error);
@@ -37,6 +44,10 @@ const AddItemToDb = () => {
             <div>
 
                 <form onSubmit={addItemTodb} className="w-2/5 ">
+                    <div className="mb-6">
+                        <label htmlFor="name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your Email</label>
+                        <input type="email" value={user?.email} name="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your Email Is..." required="" readOnly />
+                    </div>
                     <div className="mb-6">
                         <label htmlFor="name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Item Name</label>
                         <input type="text" name="name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Item That You Want To Add" required="" />

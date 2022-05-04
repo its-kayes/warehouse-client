@@ -51,7 +51,7 @@ const ManageInventory = () => {
                                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{item.name}</h5>
                                 <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Supply by {item.supplier}</p>
                                 <div className='pice-quantity'>
-                                    <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Price:- {item.price}</p>
+                                    <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Price:- $ {item.price}</p>
                                     <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Quantity:- {item.quantity} Pice</p>
                                 </div>
                                 <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{item.body}</p>
