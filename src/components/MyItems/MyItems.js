@@ -46,7 +46,7 @@ const MyItems = () => {
     return (
         <div>
 
-            <h1 className='text-3xl  mt-8 mb-12 font-bold tracking-tight text-gray-900 dark:text-white'> Your Total Products Is:- {myItems.length}  </h1>
+            <h1 className='text-3xl  mt-8 mb-12 font-bold tracking-tight text-gray-900 dark:text-white'> Your Total Product Is:- {myItems.length}  </h1>
 
             <div>
 
