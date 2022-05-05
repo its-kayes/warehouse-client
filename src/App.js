@@ -13,6 +13,7 @@ import Inventory from './components/Inventory/Inventory';
 import InventoryDetails from './components/Inventory/InventoryDetails';
 import ManageInventory from './components/ManageInventory/ManageInventory';
 import AddItemToDb from './components/ManageInventory/AddItemToDb';
+import Blogs from './components/About/Blogs';
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
           </RequireAuth>}> </Route>
 
         <Route path='/register' element={<Register></Register>}> </Route>
+        <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='*' element={<NotFound />}> </Route>
       </Routes>
       <Footer></Footer>
