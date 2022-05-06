@@ -8,10 +8,6 @@ const Footer = () => {
             <footer className="p-4 bg-white rounded-lg shadow md:px-6 md:py-8 dark:bg-gray-800">
                 <div className="sm:flex sm:items-center sm:justify-between">
                     <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"> Clothing Warehouse </span>
-                    {/* <a href="https://flowbite.com" className="flex items-center mb-4 sm:mb-0">
-                        <img src="/docs/images/logo.svg" className="mr-3 h-8" alt="Flowbite Logo" />
-                    </a> */}
-
                     <ul className="flex flex-wrap items-center mb-6 text-xl text-gray-500 sm:mb-0 dark:text-gray-400">
                         <li>
                             <a href="https://www.linkedin.com/in/emrul-kayes-b61895237/" className="mr-4 hover:underline md:mr-6 "><i className="fa-brands fa-linkedin"></i></a>
@@ -27,7 +23,7 @@ const Footer = () => {
                         </li>
                     </ul>
                 </div>
-                <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400"> This Website is Design And Deploy by Emrul Kayes for Educational Purpose
+                <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400"> This Website Is Design And Deploy by <span className='font-semibold'> <a href="https://www.linkedin.com/in/emrul-kayes-b61895237"> Emrul Kayes </a> </span> For Educational Purpose
                 </span>
                 <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© Copyright 2022</span>
             </footer>

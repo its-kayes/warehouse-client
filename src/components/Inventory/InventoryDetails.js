@@ -68,13 +68,8 @@ const InventoryDetails = () => {
         console.log("update", newObject);
     }
 
-
-
-
-
     return (
         <div>
-
             <div className='flex justify-around mt-14'>
 
                 <div className=''>
@@ -95,16 +90,12 @@ const InventoryDetails = () => {
                             <button type="button" onClick={deliverStock} className="text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900"> <i className="fa-brands fa-get-pocket mr-2"></i>  Delivered </button>
                         </div>
                     </div>
-
-
                 </div>
-
-
-
 
                 <div className='items-center mt-32'>
                     <div className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-                        <div className="flex flex-col items-center pb-10 px-4 pt-6">
+                        <div className="flex flex-col items-center pb-10 px-4 pt-3">
+                            <p className='mb-6 text-xl font-medium text-gray-900 dark:text-white'> Restock Item </p>
                             <img className="mb-3 w-24 h-24 rounded-full shadow-lg" src={peritem?.userImg} alt="Bonnie image" />
                             <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">{peritem?.name}</h5>
                             <span className="text-sm text-gray-500 dark:text-gray-400">How many product do you want to add ?</span>
