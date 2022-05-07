@@ -12,7 +12,7 @@ const MyItems = () => {
     let email = user.email;
 
     useEffect(() => {
-        let url = `http://localhost:5000/myitems?email=${email}`;
+        let url = `https://lit-gorge-09323.herokuapp.com/myitems?email=${email}`;
         fetch(url, {
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -20,7 +20,7 @@ const MyItems = () => {
         })
             .then(res => res.json())
             .then(data => setMyItems(data));
-        
+
         // let {data} = axios.get(url);
         // setMyItems(data);
     }, [user])
@@ -35,7 +35,7 @@ const MyItems = () => {
         let sureDelete = window.confirm(" Are You Sure to Delete this Products ? ");
         if (sureDelete) {
             // console.log(id);
-            let url = `http://localhost:5000/items/${id}`;
+            let url = `https://lit-gorge-09323.herokuapp.com/items/${id}`;
             fetch(url, {
                 method: 'DELETE',
             })

@@ -7,7 +7,7 @@ const InventoryDetails = () => {
     let [peritem, setPeritem] = useState();
 
     useEffect(() => {
-        let url = `http://localhost:5000/items/${id}`;
+        let url = `https://lit-gorge-09323.herokuapp.com/items/${id}`;
         // console.log(url);
         fetch(url)
             .then(res => res.json())
@@ -24,7 +24,7 @@ const InventoryDetails = () => {
         let stock = parseInt(previousStock) + parseInt(inputStockValue);
         let newObject = { ...peritem, quantity: stock };
 
-        let url = `http://localhost:5000/items/${id}`;
+        let url = `https://lit-gorge-09323.herokuapp.com/items/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -50,7 +50,7 @@ const InventoryDetails = () => {
         let stock = parseInt(previousStock) - 1;
         let newObject = { ...peritem, quantity: stock };
 
-        let url = `http://localhost:5000/items/${id}`;
+        let url = `https://lit-gorge-09323.herokuapp.com/items/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {

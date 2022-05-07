@@ -11,7 +11,7 @@ const Login = () => {
 
     let navigate = useNavigate();
     let location = useLocation();
-    let [email, setEmail] = useState(); 
+    let [email, setEmail] = useState();
 
 
     const [
@@ -35,7 +35,7 @@ const Login = () => {
         const password = event.target.password.value;
         console.log(email, password);
         await signInWithEmailAndPassword(email, password);
-        let {data} = await axios.post('http://localhost:5000/login', {email});
+        let { data } = await axios.post('https://lit-gorge-09323.herokuapp.com/login', { email });
         localStorage.setItem('accessToken', data.accessToken);
         console.log(data);
     }

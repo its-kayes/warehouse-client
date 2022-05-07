@@ -21,7 +21,7 @@ const AddItemToDb = () => {
         let newItem = { name, quantity, supplier, price, body, userImg, email }
         console.log(newItem);
         event.target.reset();
-        fetch('http://localhost:5000/additemtodb', {
+        fetch('https://lit-gorge-09323.herokuapp.com/additemtodb', {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json'
@@ -42,7 +42,7 @@ const AddItemToDb = () => {
         <div className=''>
             {/* <h1>this is add item Form Part</h1> */}
             <div className='flex justify-center  '>
-               
+
                 <form onSubmit={addItemTodb} className=' add-responsive w-2/4 mt-20 bg-white rounded-lg border border-gray-400 p-10 shadow-md sm:p-6 lg:p-8 dark:bg-gray-800 dark:border-gray-700'>
                     <h1 className='text-2xl mb-16 underline'> Your Product Details </h1>
                     <div className="relative z-0 w-full mb-6 group">
