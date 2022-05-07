@@ -5,12 +5,12 @@ const About = () => {
         <div>
             <div className='flex justify-center'>
 
-                <div class="p-5 mt-10 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+                <div className="p-5 mt-10 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
                     
-                    <img class="rounded-t-lg" src="https://i.ibb.co/jbWcFpv/1640680010421-1-1.jpg" alt="" />
-                    <div class="p-5">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Emrul Kayes</h5>
-                        <p class="mb-4 font-normal text-gray-700 dark:text-gray-400"> Try my best to be a Web-Developer and I'll be successful, insha'Allah.
+                    <img className="rounded-t-lg" src="https://i.ibb.co/jbWcFpv/1640680010421-1-1.jpg" alt="" />
+                    <div className="p-5">
+                        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Emrul Kayes</h5>
+                        <p className="mb-4 font-normal text-gray-700 dark:text-gray-400"> Try my best to be a Web-Developer and I'll be successful, insha'Allah.
                             <ul className='mt-2'>
                                 <span className='underline'>Good At ( Frontend)</span> :-
                                 HTML, 
