@@ -1,6 +1,6 @@
 import { async } from '@firebase/util';
 import React from 'react';
-import { useCreateUserWithEmailAndPassword, createUserWithEmailAndPassword } from 'react-firebase-hooks/auth'
+import { useCreateUserWithEmailAndPassword, createUserWithEmailAndPassword, useSendEmailVerification } from 'react-firebase-hooks/auth'
 import { Link } from 'react-router-dom';
 import auth from '../../firebase.init';
 import Social from '../Social/Social';
@@ -11,6 +11,8 @@ import Social from '../Social/Social';
 let errorElement;
 
 const Register = () => {
+
+    const [sendEmailVerification, sending, verifyError] = useSendEmailVerification(auth);
 
     const [
         createUserWithEmailAndPassword,
@@ -26,10 +28,11 @@ const Register = () => {
         const password = event.target.password.value;
         console.log(email, password);
         await createUserWithEmailAndPassword(email, password);
+        await sendEmailVerification();
     }
 
 
-    if (error) {
+    if (error || verifyError) {
         errorElement = <p className='text-center bg-red-700 rounded-full mt-5 text-white p-3'>  Error Login </p>
     }
 
