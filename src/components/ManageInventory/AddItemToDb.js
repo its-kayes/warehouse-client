@@ -41,9 +41,9 @@ const AddItemToDb = () => {
     return (
         <div className=''>
             {/* <h1>this is add item Form Part</h1> */}
-            <div className='flex justify-center '>
+            <div className='flex justify-center  '>
                
-                <form onSubmit={addItemTodb} className='w-2/4 mt-20 bg-white rounded-lg border border-gray-400 p-10 shadow-md sm:p-6 lg:p-8 dark:bg-gray-800 dark:border-gray-700'>
+                <form onSubmit={addItemTodb} className=' add-responsive w-2/4 mt-20 bg-white rounded-lg border border-gray-400 p-10 shadow-md sm:p-6 lg:p-8 dark:bg-gray-800 dark:border-gray-700'>
                     <h1 className='text-2xl mb-16 underline'> Your Product Details </h1>
                     <div className="relative z-0 w-full mb-6 group">
                         <input type="email" name="email" value={user?.email} className="block py-2.5 px-0 w-full text-xl text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required="" readOnly />

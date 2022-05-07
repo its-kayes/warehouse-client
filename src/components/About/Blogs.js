@@ -3,7 +3,7 @@ import React from 'react';
 const Blogs = () => {
     return (
         <div>
-            <div className='grid grid-cols-2 gap-8 text-2xl'>
+            <div className='blogs-responsive grid grid-cols-2 gap-8 text-2xl'>
                 <p className='bg-slate-300 rounded-3xl p-10 m-8'>
                     <p className='font-semibold'>
                         Difference Between Javascript and Nodejs ?

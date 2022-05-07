@@ -7,10 +7,21 @@
     .m-text {
         font-size: .9em;
     }
+
     .footer-responsive {
         display: flex;
         justify-content: center;
         margin-top: 15px;
+    }
+
+    .add-responsive {
+        width: 100%;
+    }
+
+    .blogs-responsive {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        font-size: .9em;
     }
 }
 
