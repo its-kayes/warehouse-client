@@ -8,7 +8,6 @@ import './Home.css';
 const Home = () => {
     return (
         <div>
-            {/* <h1> This Is home part </h1> */}
             <div>
                 <img src="warehouse.png" alt="" />
             </div>

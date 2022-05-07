@@ -2,3 +2,15 @@
     display: none;
 }
 
+
+@media only screen and (max-width:576px) {
+    .m-text {
+        font-size: .9em;
+    }
+    .footer-responsive {
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+    }
+}
+
