@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
@@ -12,9 +13,16 @@ const MyItems = () => {
 
     useEffect(() => {
         let url = `http://localhost:5000/myitems?email=${email}`;
-        fetch(url)
+        fetch(url, {
+            headers: {
+                authorization: `Bearer ${localStorage.getItem('accessToken')}`
+            }
+        })
             .then(res => res.json())
             .then(data => setMyItems(data));
+        
+        // let {data} = axios.get(url);
+        // setMyItems(data);
     }, [user])
 
 
