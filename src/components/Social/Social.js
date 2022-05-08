@@ -1,9 +1,8 @@
 import React from 'react';
-import { useSignInWithGithub, useSignInWithGoogle, useSignInWithMicrosoft } from 'react-firebase-hooks/auth';
+import { useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 
 const Social = () => {
-    // const [signInWithMicrosoft, user, loading, error] = useSignInWithMicrosoft(auth);
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
     const [signInWithGithub, gitUser, gitLoading, gitError] = useSignInWithGithub(auth);
 

@@ -1,6 +1,6 @@
 # Clothing Warehouse
 
-This project a Warehouse website where Cloths are Stored [Clothing Warehouse](https://warehouse-32ec4.web.app/).
+This project a Warehouse website where Cloths are Stored. ->  [Clothing Warehouse](https://warehouse-32ec4.web.app/).
 
 
 ## About Clothing Warehouse

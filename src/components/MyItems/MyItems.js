@@ -1,4 +1,3 @@
-import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
@@ -20,9 +19,6 @@ const MyItems = () => {
         })
             .then(res => res.json())
             .then(data => setMyItems(data));
-
-        // let {data} = axios.get(url);
-        // setMyItems(data);
     }, [user])
 
 
@@ -34,14 +30,12 @@ const MyItems = () => {
     let deleteItem = id => {
         let sureDelete = window.confirm(" Are You Sure to Delete this Products ? ");
         if (sureDelete) {
-            // console.log(id);
             let url = `https://lit-gorge-09323.herokuapp.com/items/${id}`;
             fetch(url, {
                 method: 'DELETE',
             })
                 .then(res => res.json())
                 .then(data => {
-                    // console.log(data);
                     if (data.deletedCount > 0) {
                         let presentItem = myItems.filter(item => item._id !== id);
                         setMyItems(presentItem);

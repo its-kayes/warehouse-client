@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import useItems from '../../hook/useItems';
-// import Items from '../Items/Items';
 
 const ManageInventory = () => {
 
@@ -15,14 +14,12 @@ const ManageInventory = () => {
     let deleteItem = id => {
         let sureDelete = window.confirm(" Are You Sure to Delete this Products ? ");
         if (sureDelete) {
-            // console.log(id);
             let url = `https://lit-gorge-09323.herokuapp.com/items/${id}`;
             fetch(url, {
                 method: 'DELETE',
             })
                 .then(res => res.json())
                 .then(data => {
-                    // console.log(data);
                     if (data.deletedCount > 0) {
                         let presentItem = items.filter(item => item._id !== id);
                         setItems(presentItem);
@@ -71,28 +68,6 @@ const ManageInventory = () => {
                 }
             </div>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        // <div>
-        //     <h1 className='text-4xl mt-12 mb-12 font-bold tracking-tight text-gray-900 dark:text-white'> All Items That Can Manage You </h1>
-        //     <Items>  </Items>
-
-        // </div>
     );
 };
 

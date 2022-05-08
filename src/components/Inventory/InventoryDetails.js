@@ -8,14 +8,11 @@ const InventoryDetails = () => {
 
     useEffect(() => {
         let url = `https://lit-gorge-09323.herokuapp.com/items/${id}`;
-        // console.log(url);
         fetch(url)
             .then(res => res.json())
             .then(data => setPeritem(data));
 
     }, [])
-    console.log(peritem);
-
 
     let updateStock = event => {
         event.preventDefault();
@@ -34,13 +31,10 @@ const InventoryDetails = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(" Data Update", data);
                 alert("Update Quintaty ");
                 setPeritem(newObject);
                 event.target.reset();
             })
-
-        console.log("update", newObject);
     }
 
 
@@ -60,12 +54,10 @@ const InventoryDetails = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(" Data Update", data);
                 alert("Update Quintaty ");
                 setPeritem(newObject);
             })
 
-        console.log("update", newObject);
     }
 
     return (

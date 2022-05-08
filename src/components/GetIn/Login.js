@@ -31,13 +31,10 @@ const Login = () => {
 
     let loginSubmit = async event => {
         event.preventDefault();
-        // const email = event.target.email.value;
         const password = event.target.password.value;
-        console.log(email, password);
         await signInWithEmailAndPassword(email, password);
         let { data } = await axios.post('https://lit-gorge-09323.herokuapp.com/login', { email });
         localStorage.setItem('accessToken', data.accessToken);
-        console.log(data);
     }
 
     let from = location.state?.from?.pathname || "/";

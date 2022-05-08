@@ -9,8 +9,6 @@ const Items = () => {
 
     let homItemsId = 6
     let homeItems = items.filter(item => item.postId === homItemsId);
-    console.log(homeItems);
-
 
 
     let navigateToInventory = (id) => {
@@ -19,7 +17,6 @@ const Items = () => {
 
     return (
         <div>
-            {/* <h1> Item kaj kore ? </h1> */}
             <div className='items-container'>
                 {
                     homeItems.map(item =>
