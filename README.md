@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+# Clothing Warehouse
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project a Warehouse website where Cloths are Stored [Clothing Warehouse](https://warehouse-32ec4.web.app/).
 
-## Available Scripts
 
-In the project directory, you can run:
+## About Clothing Warehouse
 
-### `npm start`
+--> In Home page a Unique Navbar, a Picture of our warehouse, Only 6 stored Items are shown , A Mystery-box Part, Subscription part and Footer.  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+--> In Inventory part I just show only This 6 items.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+--> In Manage Inventory Page There are all data of the Warehouse. 
+   -> There are also a Button then allow you to add Items of our Warehouse.
+   -> Every Item has a Update Button.
+     -> That allow you to update Stock of this selective Item.
 
-### `npm test`
+   -> And a Delete Button. clicking this button item will be deleted.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+--> Add Item part will help you to add item to our Warehouse.
 
-### `npm run build`
+--> My Items Part will show all of Product of login user.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+--> About part are the simple description of myself.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+--> In this blogs part there are 4 blogs are written.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+**Note: For Login or Sign-up every user will get a `JWT` token that allow him/her to get access in `My Items` Part .**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## In This Project 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+In this project I do use this technology :
 
-## Learn More
+### `Tailwind CSS`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+I do use Tailwind CSS for Design this website. 
+For this type of project I choose Tailwind because it's so relevant for this project and also Tailwind easy to use.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### `React.js`
 
-### Code Splitting
+I do use React.js as JavaScript library.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+React (also known as React.js or ReactJS) is a free and open-source front-end JavaScript library for building user interfaces based on UI components. It is maintained by Meta (formerly Facebook) and a community of individual developers and companies.
 
-### Analyzing the Bundle Size
+### `Node.js`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+As if I should deploy my website so I need to code some backend code. I do use Node.js for manage backend code.  
 
-### Making a Progressive Web App
+Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### `Express.js`
 
-### Advanced Configuration
+In this project Express.js are use.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Express.js, or simply Express, is a back end web application framework for Node.js, released as free and open-source software under the MIT License. It is designed for building web applications and APIs. It has been called the de facto standard server framework for Node.js
 
-### Deployment
+### `Mongodb`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+For store data and Get API I do use Mongodb. 
 
-### `npm run build` fails to minify
+MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas. MongoDB is developed by MongoDB Inc. and licensed under the Server Side Public License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### `Firebase`
+
+For Authentication and Authorization I do use Firebase. 
+
+Firebase is a platform developed by Google for creating mobile and web applications. It was originally an independent company founded in 2011. In 2014, Google acquired the platform and it is now their flagship offering for app development
+
+### `Heroku`
+
+For Deploy Backend Server I use Heroku. 
+
+Heroku is a cloud platform as a service supporting several programming languages. One of the first cloud platforms, Heroku has been in development since June 2007, when it supported only the Ruby programming language, but now supports Java, Node.js, Scala, Clojure, Python, PHP.
+
+
+
