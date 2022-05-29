@@ -5,6 +5,7 @@ import './Items.css';
 
 const Items = () => {
     let [items, setItems] = useItems()
+    console.log(items);
     let navigate = useNavigate();
 
     let homItemsId = 6

@@ -21,7 +21,6 @@ const Register = () => {
         error,
     ] = useCreateUserWithEmailAndPassword(auth);
 
-
     let registerSubmit = async event => {
         event.preventDefault();
         const email = event.target.email.value;
