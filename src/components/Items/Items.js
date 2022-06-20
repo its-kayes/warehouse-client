@@ -1,12 +1,19 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import useItems from '../../hook/useItems';
+import Loading from '../RequireAuth/Loading';
 import './Items.css';
 
 const Items = () => {
-    let [items, setItems] = useItems()
-    console.log(items);
     let navigate = useNavigate();
+
+    let [items, setItems] = useItems()
+
+    if (!items.length) {
+        return <Loading> </Loading>
+    }
+
+    console.log(items);
 
     let homItemsId = 6
     let homeItems = items.filter(item => item.postId === homItemsId);
